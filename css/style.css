@@ -2,10 +2,10 @@
   font-family: "Raleway";
   color: black;
   text-decoration: none;
+  box-sizing: border-box;
 }
-/* BODY  */
 body {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: auto;
   padding: 0 50px;
 }
@@ -108,7 +108,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-/* SECTION SEARCH */
+/***************************************************************** SEARCH  */
 .search {
   display: flex;
   flex-direction: column;
@@ -154,20 +154,26 @@ body {
   padding: 0 20px;
   cursor: pointer;
 }
-.search__btn-titre {
+.search__icon {
+  color: #ffffff;
+}
+.search__btn--desktop {
   font-weight: 700;
   font-size: 18px;
   color: #ffffff;
   margin: 0px 10px;
 }
-/* DIV FILTER */
+.search__btn--phone {
+  display: none !important;
+}
+/* FILTER */
 .filtres {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 /* ICI ==> FILTRE TITRE */
-.filtres__menu {
+.filtres__list {
   display: flex;
   flex-wrap: wrap;
   flex: content;
@@ -190,16 +196,21 @@ body {
 .filtres__item:hover {
   background-color: #deebff;
 }
-.filtres__item-name {
-  margin: 15px;
+.filtres__item .item__money,
+.filtres__item .item__person,
+.filtres__item .item__heart,
+.filtres__item .item__dog {
+  color: #0065fc;
+  margin-right: 15px;
 }
 /* DETAILS RECHERCHE */
 .filtres__details {
   display: flex;
   align-items: center;
 }
-.filtres__circle {
-  display: flex;
+.filtres__info {
+  color: #0065fc;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   min-width: 25px;
@@ -214,41 +225,43 @@ body {
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.accommodation__section {
+/*****************************************************************  SECTION RESULTS */
+.accommodation__results {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   padding: 40px;
-}
-/*  SECTION RESULTS */
-.accommodation__results {
   background: #d9d9d9;
-  margin: 0 10px 0 0;
-  flex-basis: 70%;
+  flex-basis: 66%;
 }
-/* ICI TITRE SECTION VOIR TITRE */
+/* ICI ==> TITRE SECTION VOIR TITRE */
 .results__ctn {
   display: flex;
-  /* flex-flow: row wrap; === flex-direction: row + flex-wrap: wrap;  */
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 20px 0;
-  gap: 20px;
+  gap: 10px;
 }
 .results__card {
   background: #ffffff;
   box-shadow: 8px 8px 15px rgb(214, 214, 214);
   border-radius: 20px;
   padding: 5px;
-  /* flex: 1 1 30%; === flex-grow: 1 + flex-shrink: 0 + flex-basis: 30%; */
-  flex: 1 0 30%;
+  flex-basis: 30%;
+  flex-grow: 1;
+  min-width: 240px;
+}
+.results__lien {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 /* ICI ==> LIEN MORE VOIR TITRE */
 .results__img {
   border-radius: 15px 15px 0px 0px;
-  width: 100%;
   object-fit: cover;
-  height: 110px;
+  height: 60%;
   max-height: 110px;
 }
 .results__details {
@@ -256,51 +269,60 @@ body {
   flex-direction: column;
   margin-left: 15px;
 }
-.results__lien {
+.results__stars {
   margin-top: auto;
-  margin-bottom: auto;
 }
-/* SECTION POPULAR */
+/***************************************************************** SECTION POPULAR */
 .accommodation__popular {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 40px;
   background: #d9d9d9;
   align-items: center;
-  margin: 0 0 0 10px;
-  flex-basis: 30%;
+  flex-basis: 32%;
+}
+/* ICI ==> TITRE */
+.popular__graph {
+  color: #0065fc;
 }
 .popular__ctn {
   display: flex;
   flex-wrap: wrap;
   padding: 20px 0;
-  row-gap: 20px;
-  column-gap: 20px;
+  gap: 15px;
 }
 .popular__card {
-  display: flex;
   background: #ffffff;
   box-shadow: 8px 8px 15px rgb(214, 214, 214);
   border-radius: 20px;
   padding: 5px;
-  height: 135px;
-  flex: 100%;
+
+  flex-basis: 100%;
 }
-.popular__card a {
+.popular__lien {
   display: flex;
 }
 .popular__img {
   border-radius: 15px 0px 0px 15px;
-  min-width: 37%;
-  max-width: 37%;
   object-fit: cover;
+
+  flex-basis: 30%;
+  max-width: 30%;
+  height: 145px;
+  min-height: 145px;
 }
 .popular__details {
   display: flex;
   flex-direction: column;
   margin-left: 15px;
+
+  flex-basis: 60%;
 }
 .popular__stars {
   margin-top: auto;
 }
-/* SECTION ACTIVITIES */
+/***************************************************************** SECTION ACTIVITIES */
 .activities {
   display: flex;
   flex-direction: column;
@@ -338,9 +360,9 @@ body {
   flex-basis: 33%;
 }
 .footer__colum {
+  flex-basis: 33%;
   display: flex;
   flex-direction: column;
-  flex-basis: 33%;
 }
 .footer__menu {
   list-style: none;
@@ -349,30 +371,12 @@ body {
 .footer__menu li {
   margin-bottom: 5px;
 }
-/***************************************************************** ICON  */
-.i__star {
+/***************************************************************** STARS  */
+.star {
   color: #f2f2f2;
 }
-.i__star--full {
+.star--full {
   color: #0065fc;
-}
-.i__graph,
-.i__money,
-.i__person,
-.i__heart,
-.i__dog,
-.i__info {
-  color: #0065fc;
-}
-.i__search {
-  color: #ffffff;
-}
-/* Pourquoi j'y arrive pas avec une class stp ?  */
-/* .i__search--active{
-    display: none;
-} */
-#i__search {
-  display: none;
 }
 
 /* -----------------------------------------------------------
@@ -382,22 +386,19 @@ body {
   .accommodation {
     flex-direction: column;
     margin-bottom: 0;
-  }
-  .accommodation__section {
-    margin: 0 0 40px 0;
+    gap: 20px;
   }
   .popular__ctn {
-    column-gap: 20px;
+    gap: 10px;
   }
   .popular__card {
-    flex: 30%;
-    max-width: 45%;
+    flex-basis: 30%;
+    flex-grow: 1;
   }
   .activities__img {
     height: 220px;
   }
 }
-
 /* -----------------------------------------------------------
  RESPONSIVE 768 
  -------------------------------------------------------------*/
@@ -437,38 +438,28 @@ body {
   }
   .filtres__item {
     justify-content: start;
-    flex: 30%;
-  }
-  .filtres__item-name {
-    margin: 8px;
-    font-size: 11px;
+    flex-basis: 30%;
+    flex-grow: 1;
   }
   .accommodation {
     flex-direction: column-reverse;
-  }
-  .accommodation__section {
-    padding: 20px;
   }
   .accommodation__results {
     margin: 0;
     background: none;
   }
   .results__card {
-    flex: 100%;
+    flex-basis: 100%;
   }
-  .results__lien {
+  .results__more {
     display: none;
   }
   .accommodation__popular {
     margin: 0;
     border-radius: 0;
   }
-  .popular__ctn {
-    flex-direction: column;
-  }
   .popular__card {
-    flex: none;
-    max-width: none;
+    flex-basis: 100%;
   }
   .activities {
     padding: 20px;
@@ -489,10 +480,11 @@ body {
   .footer {
     flex-direction: column;
   }
-  #i__search {
-    display: inline-block;
-  }
-  .search__btn-titre--active {
+
+  .search__btn--desktop {
     display: none;
+  }
+  .search__btn--phone {
+    display: inline-block !important;
   }
 }
