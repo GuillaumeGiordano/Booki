@@ -12,22 +12,21 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- link for Css file -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Title -->
-    <title>Booki</title>
+    <title>
+      Booki trouver des hébergements et des activités dans la ville de votre
+      choix.
+    </title>
   </head>
-  <!-- -------------------------------------------------------------------  BODY -->
+
   <body>
     <!-- ---------------------------------------------------------------  HEADER -->
     <header class="header">
-      <!------------------------------------ Logo -->
       <img
         src="/img/logo/Booki.png"
         class="header__logo"
         alt="logo booki, bleu"
       />
-      <!------------------------------------ NAV -->
       <nav class="header__nav">
         <ul class="header__menu">
           <li class="header__item">
@@ -39,17 +38,14 @@
         </ul>
       </nav>
     </header>
-    <!-- -----------------------------------------------------------------  MAIN -->
+
     <main class="main">
-      <!-- ----------------------------------------------------------------  SECTION TITLE + SEARCH + FILTRES -->
+      <!-- --------------------------------------------------------------- SECTION SEARCH  -->
       <section class="search">
-        <!-- TITRE -->
         <h1 class="search__title">
           Trouvez un herbergement pour des vacances de rêve
         </h1>
-        <!-- INFORMATIONS -->
         <p class="search__details">En plein centre-ville ou en pleine nature</p>
-        <!-- FORMULAIRE -->
         <form action="post" class="search__form">
           <label for="search" class="search__label">
             <i class="fa-solid fa-location-dot"></i>
@@ -71,11 +67,8 @@
             >
           </button>
         </form>
-        <!-- FILTRES -->
         <div class="filtres">
-          <!-- TITRE -->
           <h2 class="filtres__title">Filtres</h2>
-          <!-- MENU -->
           <ul class="filtres__menu">
             <li class="filtres__item">
               <i class="fa-solid fa-money-bill-wave i__money"></i>
@@ -102,29 +95,24 @@
           Plus de 500 logements sont disponibles dans cette ville
         </p>
       </section>
-      <!-- ---------------------------------------------------------------  DIV ACCOMMODATION -->
+
       <div class="accommodation" id="accommodation">
         <!-- -------------------------------------------------------------  SECTION RESULTS-->
-        <section class="accommodation__section accommodation__results">
-          <!-- offers Title -->
+        <section class="accommodation__section accommodation__results results">
           <h2 class="results__title">Hébergements à Marseille</h2>
-          <!-- offers Container -->
+
           <div class="results__ctn">
             <!-- Card N°1 -->
             <article class="results__card">
-              <!-- make the card "click" -->
               <a href="#">
-                <!-- Element N°1 -->
                 <img
                   src="/img/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
                   alt="chambre avec un lit double noir et rideaux vert"
                   class="results__img"
                 />
-                <!-- Element N°2 -->
                 <div class="results__details">
                   <h3 class="results__place">Auberge La Canebière</h3>
                   <p class="results__infos">Nuit à partir de 25€</p>
-                  <!-- Element N°3 -->
                   <div class="results__stars">
                     <i class="fa-solid fa-star i__star i__star--full"></i>
                     <i class="fa-solid fa-star i__star i__star--full"></i>
@@ -136,7 +124,7 @@
               </a>
             </article>
             <!-- Card N°2 -->
-            <div class="results__card">
+            <article class="results__card">
               <a href="#">
                 <img
                   src="/img/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
@@ -155,7 +143,7 @@
                   </div>
                 </div>
               </a>
-            </div>
+            </article>
             <!-- Card N°3 -->
             <article class="results__card">
               <a href="#">
@@ -244,13 +232,14 @@
           <!-- More links -->
           <a href="#" class="results__lien">Afficher plus</a>
         </section>
+
         <!-- ------------------------------------------------------------------  SECTION POPULAR -->
         <section class="accommodation__section accommodation__popular">
-          <!-- Title -->
           <h2 class="popular__title">
             Les plus populaires
             <i class="fa-solid fa-chart-line i__graph"></i>
           </h2>
+
           <div class="popular__ctn">
             <!-- Card N°1 -->
             <article class="popular__card">
@@ -320,11 +309,11 @@
           </div>
         </section>
       </div>
-      <!-- -----------------------------------------------------------------------------------  SECTION  activités -->
+
+      <!-- -----------------------------------------------------------------------------------  SECTION  activities -->
       <section class="activities" id="activities">
-        <!-- Title -->
         <h2 class="activities__title">Activités à Marseille</h2>
-        <!-- Contener activity -->
+
         <div class="activities__ctn">
           <!-- Card N°1 -->
           <article class="activities__card">
@@ -333,7 +322,6 @@
               alt="port, nombreux bateux blanc,bâtiments et la Bonne Mère en arriere plan "
               class="activities__img"
             />
-            <!-- MEttre H4 -->
             <h3 class="activities__place">Vieux-Port</h3>
           </article>
           <!-- Card N°2 -->
@@ -358,14 +346,15 @@
           <article class="activities__card">
             <img
               src="/img/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-              alt="Notre Bonne Mère, grande et magnifique église au sommet d'une coline"
+              alt="Alias, Notre Bonne Mère, grande et magnifique église au sommet d'une coline"
               class="activities__img"
             />
-            <h3 class="activities__place">Notre Bonne mère</h3>
+            <h3 class="activities__place">Notre-Dame-de-la-Garde</h3>
           </article>
         </div>
       </section>
     </main>
+
     <!-- -----------------------------------------------------------------------------  FOOTER -->
     <footer class="footer">
       <!-- A Propos -->
