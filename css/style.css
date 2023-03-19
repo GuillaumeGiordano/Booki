@@ -1,6 +1,6 @@
 * {
   font-family: "Raleway";
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   box-sizing: border-box;
 }
@@ -27,7 +27,7 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-/* TEXT type : FILTRE */
+/* TEXT type : FILTERS */
 .filters__title,
 .results__link {
   margin: 4px 0;
@@ -186,9 +186,9 @@ body {
   border: 2px solid #d9d9d9;
   border-radius: 25px;
   height: 50px;
-  padding: 0 15px;
+  padding: 0 10px;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 1rem;
   cursor: pointer;
 }
 .search .filters__item:hover {
@@ -196,7 +196,7 @@ body {
 }
 .search .filters__icon {
   color: #0065fc;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 /* DETAILS RECHERCHE */
 .search__details {
@@ -245,7 +245,6 @@ body {
   border-radius: 20px;
   padding: 5px;
   width: 29%;
-  flex-grow: 1;
 }
 .results .card__link {
   display: flex;
@@ -255,9 +254,7 @@ body {
 .results .card__img {
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
-  height: 60%;
-  min-height: 120px;
-  max-height: 120px;
+  height: 120px;
 }
 .results .card__content {
   display: flex;
@@ -332,7 +329,7 @@ body {
   flex-direction: column;
   margin: 30px 0;
 }
-/* .activities__title */
+/* .activities__title ==> TITRE */
 .activities__ctn {
   display: flex;
   justify-content: space-between;
@@ -409,6 +406,9 @@ body {
     flex-basis: 30%;
     flex-grow: 1;
   }
+  .popular .card__img {
+    max-height: none;
+  }
   .activities {
     margin-top: 60px;
   }
@@ -469,9 +469,12 @@ body {
     gap: 10px;
   }
   .search .filters__item {
-    width: 48%;
-    font-size: 0.7rem;
-    padding: 0 10px;
+    flex-basis: 48%;
+    font-size: 0.688rem;
+    padding: 0 5px;
+  }
+  .filters__icon {
+    font-size: 1rem;
   }
   .accommodation {
     flex-direction: column-reverse;
@@ -495,6 +498,9 @@ body {
   }
   .popular .card {
     flex-basis: 100%;
+  }
+  .popular .card__img {
+    max-height: 130px;
   }
   .activities {
     padding: 20px;
