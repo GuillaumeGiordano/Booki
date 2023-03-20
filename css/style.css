@@ -352,7 +352,7 @@ body {
 /* BONUS */
 .activities .card:hover {
   opacity: 0.5;
-  scale: 1.1;
+  transform: scale(1.1);
 }
 /***************************************************************** FOOTER */
 .footer {
