@@ -227,7 +227,7 @@ body {
   flex-direction: column;
   border-radius: 20px;
   padding: 40px;
-  background: #d9d9d9;
+  background: #f2f2f2;
   flex-basis: 68%;
 }
 /* .results__title ==> TITRE*/
@@ -276,7 +276,7 @@ body {
   flex-direction: column;
   border-radius: 20px;
   padding: 40px;
-  background: #d9d9d9;
+  background: #f2f2f2;
   align-items: center;
   flex-basis: 35%;
 }
